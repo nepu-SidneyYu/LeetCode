@@ -22,5 +22,13 @@ func reverseList1(head *ListNode) *ListNode {
 		return head
 	}
 	var pre *ListNode = nil
-
+	cur := head
+	for cur != nil {
+		head = head.Next
+		//head = head.Next
+		cur.Next = pre
+		pre = cur
+		cur = head
+	}
+	return pre
 }

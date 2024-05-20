@@ -1,4 +1,4 @@
-package 力扣面试题
+package InterviewQuestions
 
 type ListNode struct {
 	Val  int
@@ -16,4 +16,11 @@ func reverseList(head *ListNode) *ListNode {
 	return temp
 }
 
-//迭代
+// 迭代
+func reverseList1(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
+	}
+	var pre *ListNode = nil
+
+}

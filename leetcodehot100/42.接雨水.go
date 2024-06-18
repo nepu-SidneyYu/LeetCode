@@ -1,7 +1,5 @@
 package leetcodehot100
 
-import "fmt"
-
 //[0,1,0,2,1,0,1,3,2,1,2,1]
 
 func trap(height []int) int {
@@ -42,8 +40,8 @@ func trap(height []int) int {
 	return res
 }
 
-func main() {
-	height := []int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}
-	res := trap(height)
-	fmt.Println(res)
-}
+//func main() {
+//	height := []int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}
+//	res := trap(height)
+//	fmt.Println(res)
+//}

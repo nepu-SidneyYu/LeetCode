@@ -1,6 +1,6 @@
 package leetcodehot100
 
-//二维数组标记O(mn)
+//1.二维数组标记O(mn)
 func setZeroes1(matrix [][]int) {
 	m, n := len(matrix), len(matrix[0])
 	mark := make([][]bool, m)
@@ -26,11 +26,28 @@ func setZeroes1(matrix [][]int) {
 	}
 }
 
-//O(m+n)
+//2.一维数组标记O(m+n)
 func setZeroes2(matrix [][]int) {
+	m, n := len(matrix), len(matrix[0])
+	row, col := make([]bool, m), make([]bool, n)
+	for i := 0; i < m; i++ {
+		for j := 0; j < n; j++ {
+			if matrix[i][j] == 0 {
+				row[i] = true
+				col[j] = true
+			}
+		}
+	}
+	for i := 0; i < m; i++ {
+		for j := 0; j < n; j++ {
+			if row[i] || col[j] {
+				matrix[i][j] = 0
+			}
+		}
+	}
 }
 
-//O(1)
+//3.
 func setZeroes3(matrix [][]int) {
 
 }

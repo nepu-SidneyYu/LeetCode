@@ -1,5 +1,7 @@
 package half
 
+import "fmt"
+
 func hIndex(citations []int) int {
 	n := len(citations)
 	left, right := 0, n-1
@@ -12,5 +14,6 @@ func hIndex(citations []int) int {
 			right = mid - 1
 		}
 	}
+	fmt.Println(left)
 	return n - left
 }

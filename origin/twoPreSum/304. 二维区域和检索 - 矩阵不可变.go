@@ -1,4 +1,4 @@
-package 二维前缀和
+package twoPreSum
 
 type NumMatrix struct {
 	SumMatrix [][]int
